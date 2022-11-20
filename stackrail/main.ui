@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main</class>
+ <widget class="QMainWindow" name="Main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1610</width>
+    <height>618</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="main">
+   <widget class="QGroupBox" name="grp_live">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>10</y>
+      <width>871</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Live View</string>
+    </property>
+    <widget class="QLabel" name="img_main">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>30</y>
+       <width>731</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_liveview">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>88</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Live View</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>711</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="leftgrid">
+     <item row="4" column="1">
+      <widget class="QLabel" name="lab_speed">
+       <property name="text">
+        <string>Movement Speed</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="lbl_stack_nsteps">
+       <property name="text">
+        <string>N Steps</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QDoubleSpinBox" name="box_speed">
+       <property name="suffix">
+        <string>rpm</string>
+       </property>
+       <property name="decimals">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <double>9999.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>30.000000000000000</double>
+       </property>
+       <property name="stepType">
+        <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+       </property>
+       <property name="value">
+        <double>240.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QDoubleSpinBox" name="box_pitch">
+       <property name="suffix">
+        <string>mm/rev</string>
+       </property>
+       <property name="decimals">
+        <number>3</number>
+       </property>
+       <property name="maximum">
+        <double>10.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>2.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2">
+      <widget class="QLabel" name="lab_stepsize">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLabel" name="lab_pitch">
+       <property name="text">
+        <string>Lede Screw Pitch</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QSpinBox" name="box_steps">
+       <property name="maximum">
+        <number>800</number>
+       </property>
+       <property name="singleStep">
+        <number>200</number>
+       </property>
+       <property name="value">
+        <number>400</number>
+       </property>
+       <property name="displayIntegerBase">
+        <number>10</number>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="lbl_stack_stepsize">
+       <property name="text">
+        <string>Step size</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QDoubleSpinBox" name="box_stack_stepsize">
+       <property name="suffix">
+        <string>mm</string>
+       </property>
+       <property name="decimals">
+        <number>3</number>
+       </property>
+       <property name="singleStep">
+        <double>0.001000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.500000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLabel" name="lab_steps">
+       <property name="text">
+        <string>Steps/Revolution</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QDoubleSpinBox" name="box_move">
+       <property name="suffix">
+        <string>mm</string>
+       </property>
+       <property name="decimals">
+        <number>3</number>
+       </property>
+       <property name="minimum">
+        <double>-200.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>200.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.001000000000000</double>
+       </property>
+       <property name="stepType">
+        <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+       </property>
+       <property name="value">
+        <double>0.500000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="btn_move">
+       <property name="text">
+        <string>Move</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="btn_stack">
+       <property name="text">
+        <string>Stack!</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLabel" name="lab_microsteps">
+       <property name="text">
+        <string>Microsteps</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QComboBox" name="box_microstep">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentText">
+        <string notr="true">1</string>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+       </property>
+       <property name="placeholderText">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>16</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>32</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLabel" name="lab_minstep">
+       <property name="text">
+        <string>Step Size</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QSpinBox" name="box_stack_nsteps">
+       <property name="suffix">
+        <string>steps</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="btn_outdir">
+         <property name="text">
+          <string>Choose Output Dir</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbl_outdir">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_move</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>s_btn_move()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>164</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_speed</sender>
+   <signal>editingFinished()</signal>
+   <receiver>Main</receiver>
+   <slot>s_update_settings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>398</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_steps</sender>
+   <signal>editingFinished()</signal>
+   <receiver>Main</receiver>
+   <slot>s_update_settings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>443</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>122</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_pitch</sender>
+   <signal>editingFinished()</signal>
+   <receiver>Main</receiver>
+   <slot>s_update_settings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>544</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>177</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_microstep</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Main</receiver>
+   <slot>s_update_settings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>510</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>298</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_speed</sender>
+   <signal>editingFinished()</signal>
+   <receiver>Main</receiver>
+   <slot>s_set_speed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>491</x>
+     <y>169</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_liveview</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Main</receiver>
+   <slot>s_toggle_liveview(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>789</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_outdir</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>s_choose_outdir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_stack</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>s_btn_stack()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>s_btn_move()</slot>
+  <slot>s_btn_stack()</slot>
+  <slot>s_update_settings()</slot>
+  <slot>s_set_speed()</slot>
+  <slot>s_toggle_liveview(bool)</slot>
+  <slot>s_choose_outdir()</slot>
+ </slots>
+</ui>
